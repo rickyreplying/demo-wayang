@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Cinzel Decorative;
+    src: url('fonts/cinzel-decorative/CinzelDecorative-Bold.ttf');
+}
+
+@font-face {
+    font-family: Century Gothic;
+    src: url('fonts/century-gothic/Century-Gothic.ttf');
+}
+
+@font-face {
+    font-family: Upakarti Serong;
+    src: url('fonts/upakarti-serong/Upakarti-Serong.ttf');
+}
+
+
+
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#f2f2f2;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-family: Cinzel Decorative;
+	font-size: 6em;
+	color: #5c3c16 ;
+}
+p{
+	font-family: Century Gothic;
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+
+.slide{
+	position:relative;
+ }
+
+
+
+.text-description
+{
+	text-align: left;
+	margin-top: 10%;
+	width: 50%;
+	margin-left: 10%;
+	font-size: 1em;
+	  
+}
+
+.text-description h1{
+	font-family: Upakarti Serong;
+}
+.text-description p {
+	margin: 50px 0px;
+}
+
+#section3 .text-description h1{
+
+	color: white;
+}
+#section3 .text-description p {
+
+	color: white
+}
+
+#section4 .text-description h1{
+	color: rgb(41, 12, 12);
+}
+
+.wayang-img {
+	
+	position: absolute;
+	top: 7%;
+	right: 7%;
+	width: 500px;
+	height: auto;
+
+}
+#section3 {
+	background-image: url("assets/demo-background.jpg");
+	background-size: cover;
+  }
+
+#wayang-video{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%; 		
+	background-color: black; /* in case the video doesn't fit the whole page*/
+  	background-image: url("assets/video-demo.mp4");
+  	background-position: center center;
+  	background-size: contain;
+   	object-fit: cover; /*cover video background */
+
+}  
+
+#section4 .text-description{
+	z-index: 4;
+	width: 100%;
+	left: 0;
+	top: 43%;
+	color: white;
+	/*
+	* Preventing flicker on some browsers
+	* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+	*/
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }

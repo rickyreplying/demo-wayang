@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo Wayang</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="script/jquery.pagepiling.css" />
+    <script type="text/javascript" src="script/jquery.pagepiling.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="pagepiling">
+        <div class="section" id="section1">
+            <h1 data-aos="fade-up" data-aos-duration="3000">Demo Wayang</h1>
+            <p data-aos="fade-right"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem
+                Ipsum has
+                been
+                the industry's standard dummy text ever since the 1500s,</p>
+
+        </div>
+        <div class="section" id=" section2">
+            <img data-aos="flip-left" class="wayang-img" src="assets/wayang-1.jpg" />
+            <div class="text-description">
+                <h1 data-aos="flip-left"> Wayang Golek</h1>
+                <p data-aos="fade-up" data-aos-duration="3000"> Wayang golek merupakan salah satu dari ragam
+                    kesenian
+                    wayang, yang berasal dari masyarakat
+                    Sunda
+                    di Jawa Barat. Pertunjukan seni wayang golek merupakan seni pertunjukan teater rakyat yang
+                    banyak dipagelarkan.</p>
+            </div>
+
+        </div>
+
+
+        <div class=" section" id="section3">
+            <div class="text-description">
+                <h1 data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"> Demo Background Image</h1>
+                <p data-aos="fade-up" data-aos-delay=" 10" data-aos-duration="1000" data-aos-easing="ease-out-back">
+                    Backgroundnya pake Image</p>
+            </div>
+
+        </div>
+
+        <div class="section" id="section4">
+            <video autoplay loop muted id="wayang-video">
+                <source src="assets/video-demo.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+                <h1 data-aos="flip-up" data-aos-offset="200"> Demo Background Video</h1>
+                <p> Backgroundnya pake Video</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                menu: null,
+                direction: 'horizontal',
+                sectionsColor: ['#FFFAA9', '#CDA63C', '#AD712B', '#1A1B18'],
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                slidesNavigation: true,
+                scrollingSpeed: 400,
+                easing: 'swing',
+                loopBottom: false,
+                loopTop: false,
+                css3: true,
+                normalScrollElements: null,
+                normalScrollElementTouchThreshold: 5,
+                touchSensitivity: 5,
+                keyboardScrolling: true,
+                sectionSelector: '.section',
+                animateAnchor: false,
+                slidesNavigation: true,
+                //events
+                onLeave: function (index, nextIndex, direction) {
+                    jQuery('.section [data-aos]').removeClass("aos-animate");
+                },
+                afterLoad: function (anchorLink, index) {
+                    jQuery('.section.active [data-aos]').addClass("aos-animate");
+                },
+                afterRender: function () {},
+            });
+        });
+    </script>
+</body>
+
+</html>
